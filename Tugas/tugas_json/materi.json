@@ -1,0 +1,24 @@
+{
+    "title":"bio data santri",
+    "total":24,
+    "status_santri": true,
+    "tatus_lulus": false,
+    "pelajaran": ["mtk","arabic","b.indonesia","it"],
+    "surah":  [
+        {
+            "no":1,
+            "nama":"al_baqarah",
+            "turun":"mekkah",
+            "ayat":286
+        },
+        {
+            "no":2,
+            "nama":"ali_imran",
+            "turun":"madinah",
+            "ayat":200
+
+        }
+
+    ]
+}
+
