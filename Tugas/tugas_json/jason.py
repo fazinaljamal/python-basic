@@ -3,10 +3,10 @@ import requests
 url = "https://api.aladhan.com/v1/timingsByCity?city=Jakarta&country=Indonesia&method=20"
 
 response = requests.get(url)
-print("Status code:", response.status_code)   # harusnya 200 kalau sukses
+print("Status code:", response.status_code)   
 
 data_json = response.json()
-print("Data keys:", data_json.keys())         # cek struktur JSON
+print("Data keys:", data_json.keys())         
 
 tanggal = data_json['data']['date']['readable']
 jadwal = data_json['data']['timings']
