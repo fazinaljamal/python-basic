@@ -1,16 +1,18 @@
 import requests
 
-url = "https://api.aladhan.com/v1/timingsByCity?city=Jakarta&country=Indonesia&method=20"
+# Arab
+url_ar = "https://api.alquran.cloud/v1/ayah/2:255/ar.alafasy"
+resp_ar = requests.get(url_ar).json()
+ayat_ar = resp_ar["data"]["text"]
 
-response = requests.get(url)
-print("Status code:", response.status_code)   
+# Inggris
+url_en = "https://api.alquran.cloud/v1/ayah/2:255/en.asad"
+resp_en = requests.get(url_en).json()
+ayat_en = resp_en["data"]["text"]
 
-data_json = response.json()
-print("Data keys:", data_json.keys())         
+print("Al-Baqarah [255] - Ayat Kursi\n")
+print("--- Teks Arab ---")
+print(ayat_ar)
 
-tanggal = data_json['data']['date']['readable']
-jadwal = data_json['data']['timings']
-
-print("Tanggal:", tanggal)
-for sholat, waktu in jadwal.items():
-    print(f"{sholat:10} : {waktu}")
+print("\n--- Translation (English) ---")
+print(ayat_en)
